@@ -21,6 +21,8 @@
   --ff-normal: "Montserrat", sans-serif;
 }
 
+/* Font Sizes Media*/
+
 @media (min-width: 15em) {
   :root {
     --fs-700: 3rem;
@@ -157,6 +159,8 @@ select {
   max-width: 50ch;
 }
 
+/* Main Grid Media*/
+
 @media (min-width: 55em) {
   .grid-container {
     text-align: center;
@@ -180,6 +184,9 @@ select {
   }
 }
 
+/* Accesibility classes */
+
+/* Screen Reader Only*/
 .sr-only {
   position: absolute;
   width: 1px;
@@ -192,6 +199,7 @@ select {
   border: 0;
 }
 
+/* Tab's interaction */
 .skip-to-content {
   position: absolute;
   z-index: 9999;
