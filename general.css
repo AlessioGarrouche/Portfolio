@@ -5,6 +5,7 @@
 :root {
   /* colors */
   --clr-dark: 230 35% 7%;
+  --clr-dark-tint: #24262f;
   --clr-light: 231 77% 90%;
   --clr-white: 0 0% 100%;
 
@@ -12,8 +13,8 @@
 
   --fs-700: clamp(3rem, 8vw + 1rem, 9.375rem);
   --fs-600: 1rem;
-  --fs-500: 1.75rem;
-  --fs-400: clamp(0.8rem, 3vw + 1rem, 1remrem);
+  --fs-500: 1rem;
+  --fs-400: clamp(0.8rem, 3vw + 1rem, 1rem);
   --fs-300: 1rem;
   --fs-200: 0.875rem;
 
@@ -27,6 +28,7 @@
   :root {
     --fs-700: 3rem;
     --fs-600: 1.7rem;
+    --fs-500: 1.25rem
     --fs-400: 1rem;
   }
 }
@@ -36,6 +38,7 @@
     /* font-sizes */
     --fs-700: 3.5rem;
     --fs-600: 2rem;
+    --fs-500: 1.75rem
     --fs-400: 1.125rem;
   }
 }
@@ -78,7 +81,7 @@ p {
 
 /* set up the body */
 body {
-  font-family: var(--ff-sans-normal);
+  font-family: var(--ff-normal);
   font-size: var(--fs-400);
   color: hsl(var(--clr-white));
   background-color: hsl(var(--clr-dark));
@@ -89,11 +92,14 @@ body {
   grid-template-rows: min-content 1fr;
 
   overflow-x: hidden;
+
 }
+
+
 
 /* make images easier to work with */
 img,
-picutre {
+picture {
   max-width: 100%;
   display: block;
 }
@@ -153,11 +159,17 @@ select {
   display: grid;
   place-items: center;
   padding-inline: 1rem;
+  padding-bottom: 4rem;
 }
 
 .grid-container * {
   max-width: 50ch;
 }
+
+.numbered-title {
+  grid-area: title;
+}
+
 
 /* Main Grid Media*/
 
@@ -225,6 +237,10 @@ select {
 }
 .bg-white {
   background-color: hsl(var(--clr-white));
+}
+
+.bg-inh {
+  background-color: inherit;
 }
 
 .text-dark {

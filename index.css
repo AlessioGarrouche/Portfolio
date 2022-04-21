@@ -10,6 +10,7 @@
 }
 
 .logo {
+  margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
   max-height: 11rem;
   aspect-ratio: 1;
 }
@@ -22,7 +23,7 @@
 }
 
 .primary-navigation {
-  --gap: clamp(1.5rem, 5vw, 3.5rem);
+  --gap: clamp(0.8rem, 2vw, 1.5rem);
   --underline-gap: 2rem;
   list-style: none;
   padding: 0;
@@ -49,7 +50,7 @@
     --underline-gap: 0.5rem;
     position: fixed;
     z-index: 1000;
-    inset: 0 0 0 30%;
+    inset: 0 0 0 40%;
     list-style: none;
     padding: min(20rem, 15vh) 2rem;
     margin: 0;
@@ -68,7 +69,7 @@
 
   .mobile-nav-toggle {
     display: block;
-    position: absolute;
+    position: fixed;
     z-index: 2000;
     right: 1rem;
     top: 2rem;
@@ -150,6 +151,10 @@
   border-color: hsl(var(--clr-white) / 1);
 }
 
+.tab-list {
+  --gap: 2rem;
+}
+
 .main-buttons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -188,4 +193,33 @@
 .large-button:last-child {
   grid-column-start: 2;
   grid-row-start: 2;
+}
+
+/* Skills layout */
+
+.grid-container--skills {
+  --flow-space: 2rem;
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+}
+
+.grid-container .numbered-title {
+  grid-area: title;
+}
+
+.grid-container--skills > img {
+  grid-area: image;
+  max-width: 60%;
+  filter: grayscale(100%);
+}
+
+.grid-container--skills > .tab-list {
+  grid-area: tabs;
+}
+
+.grid-container--skills > .skills-info {
+  grid-area: content;
 }
