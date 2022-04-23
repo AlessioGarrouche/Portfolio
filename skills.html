@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- Title -->
+    <title>Portfolio</title>
+
+    <!-- JavaScript-->
+    <script src="nav.js" defer></script>
+    <script src="tabs.js" defer></script>
+  </head>
+  <body class="home">
+    <a href="#main" class="skip-to-content"></a>
+    <!-- Header section -->
+    <header class="primary-header flex">
+      <!-- Logo  -->
+      <div class="logo-section">
+        <img class="logo" alt="personal logo" src="img/logo-favicon.png" />
+      </div>
+
+      <!-- Small sizes navigation toggle -->
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+        <span class="sr-only" aria-expanded="false">Menu</span>
+      </button>
+
+      <!-- Navbar -->
+      <nav>
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation underline-indicators flex"
+        >
+          <li class="active">
+            <a
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              href="index.html"
+              ><span aria-hidden="true">00</span>Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              href="skills.html"
+              ><span aria-hidden="true">01</span>Skills</a
+            >
+          </li>
+          <li>
+            <a
+              class="ff-sans-cond uppercase text-white letter-spacing-2"
+              href="projects.html"
+              ><span aria-hidden="true">02</span>Projects</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="grid-container grid-container--skills flow">
+      <h1 class="numbered-title"><span aria-hidden="true">01</span> Skills</h1>
+
+      <picture id="html-image">
+        <source srcset="img/skills/HTML5-logo.webp" type="image/webp" />
+        <img src="img/skills/HTML5-logo.png" alt="html5 logo" />
+      </picture>
+      <picture hidden id="css-image">
+        <source srcset="img/skills/CSS3-logo.webp" type="image/webp" />
+        <img src="img/skills/CSS3-logo.png" alt="css logo" />
+      </picture>
+      <picture hidden id="js-image">
+        <source srcset="img/skills/JS-logo.webp" type="image/webp" />
+        <img src="img/skills/JS-logo.png" alt="js logo" />
+      </picture>
+      <picture hidden id="bootstrap-image">
+        <source srcset="img/skills/bootstrap-logo.webp" type="image/webp" />
+        <img src="img/skills/bootstrap-logo.png" alt="bootstrap-logo" />
+      </picture>
+
+      <div
+        class="tab-list underline-indicators flex"
+        role="tablist"
+        aria-label="skills list"
+      >
+        <button
+          aria-selected="true"
+          role="tab"
+          aria-controls="html-tab"
+          class="uppercase text-accent bg-inh letter-spacing-2"
+          tabindex="0"
+          data-image="html-image"
+        >
+          HTML5
+        </button>
+        <button
+          aria-selected="false"
+          role="tab"
+          aria-controls="css-tab"
+          class="uppercase text-accent bg-inh letter-spacing-2"
+          tabindex="-1"
+          data-image="css-image"
+        >
+          CSS3
+        </button>
+        <button
+          aria-selected="false"
+          role="tab"
+          aria-controls="js-tab"
+          class="uppercase text-accent bg-inh letter-spacing-2"
+          tabindex="-1"
+          data-image="js-image"
+        >
+          JavaScript
+        </button>
+        <button
+          aria-selected="false"
+          role="tab"
+          aria-controls="bootstrap-tab"
+          class="uppercase text-accent bg-inh letter-spacing-2"
+          tabindex="-1"
+          data-image="bootstrap-image"
+        >
+          Bootstrap
+        </button>
+      </div>
+
+      <!-- HTML -->
+      <article
+        class="skills-info flow"
+        id="html-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
+        <h2 class="fs-700 uppercase">HTML</h2>
+
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus libero
+          officia id nostrum inventore similique quasi ipsum explicabo,
+          voluptatem quod nam labore natus? Similique, libero illo voluptatum
+          soluta nobis tenetur.
+        </p>
+      </article>
+
+      <!-- CSS -->
+      <article
+        hidden
+        class="skills-info flow"
+        id="css-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
+        <h2 class="fs-700 uppercase">CSS</h2>
+
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus libero
+          officia id nostrum inventore similique quasi ipsum explicabo,
+          voluptatem quod nam labore natus? Similique, libero illo voluptatum
+          soluta nobis tenetur.
+        </p>
+      </article>
+
+      <!-- JS -->
+      <article
+        hidden
+        class="skills-info flow"
+        id="js-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
+        <h2 class="fs-700 uppercase">JavaScript</h2>
+
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus libero
+          officia id nostrum inventore similique quasi ipsum explicabo,
+          voluptatem quod nam labore natus? Similique, libero illo voluptatum
+          soluta nobis tenetur.
+        </p>
+      </article>
+
+      <!-- Bootstrap -->
+      <article
+        hidden
+        class="skills-info flow"
+        id="bootstrap-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
+        <h2 class="fs-700 uppercase">Bootstrap</h2>
+
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus libero
+          officia id nostrum inventore similique quasi ipsum explicabo,
+          voluptatem quod nam labore natus? Similique, libero illo voluptatum
+          soluta nobis tenetur.
+        </p>
+      </article>
+    </main>
+  </body>
+</html>
