@@ -224,6 +224,11 @@
   grid-area: content;
 }
 
+.contacts {
+  display: flex;
+  gap: 2rem;
+}
+
 @media (min-width: 35em) {
   .numbered-title {
     justify-self: start;
